@@ -18,22 +18,22 @@ jobs:
     steps:
       - uses: rekgrpth/git-clone-shell-action@v1
       - uses: rekgrpth/git-fetch-upstream-merge-push-shell-action@v1
-  v3.15:
+  'v3.15':
     runs-on: ubuntu-latest
     steps:
       - uses: rekgrpth/git-clone-shell-action@v1
       - uses: rekgrpth/git-fetch-upstream-merge-push-shell-action@v1
-  v3.14:
+  'v3.14':
     runs-on: ubuntu-latest
     steps:
       - uses: rekgrpth/git-clone-shell-action@v1
       - uses: rekgrpth/git-fetch-upstream-merge-push-shell-action@v1
-  v3.13:
+  'v3.13':
     runs-on: ubuntu-latest
     steps:
       - uses: rekgrpth/git-clone-shell-action@v1
       - uses: rekgrpth/git-fetch-upstream-merge-push-shell-action@v1
-  v3.12:
+  'v3.12':
     runs-on: ubuntu-latest
     steps:
       - uses: rekgrpth/git-clone-shell-action@v1
