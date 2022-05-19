@@ -1,0 +1,40 @@
+name: Merge
+on:
+  schedule:
+    - cron: '0 19 * * *'
+  workflow_dispatch:
+env:
+  GITHUB_TOKEN: ${{ github.token }}
+  INPUTS_REPOSITORY: alpinelinux/docker-alpine
+  INPUTS_BRANCH: ${{ github.job }}
+jobs:
+  master:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rekgrpth/git-clone-shell-action@v1
+      - uses: rekgrpth/git-fetch-upstream-merge-push-shell-action@v1
+  edge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rekgrpth/git-clone-shell-action@v1
+      - uses: rekgrpth/git-fetch-upstream-merge-push-shell-action@v1
+  v3.15:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rekgrpth/git-clone-shell-action@v1
+      - uses: rekgrpth/git-fetch-upstream-merge-push-shell-action@v1
+  v3.14:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rekgrpth/git-clone-shell-action@v1
+      - uses: rekgrpth/git-fetch-upstream-merge-push-shell-action@v1
+  v3.13:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rekgrpth/git-clone-shell-action@v1
+      - uses: rekgrpth/git-fetch-upstream-merge-push-shell-action@v1
+  v3.12:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rekgrpth/git-clone-shell-action@v1
+      - uses: rekgrpth/git-fetch-upstream-merge-push-shell-action@v1
