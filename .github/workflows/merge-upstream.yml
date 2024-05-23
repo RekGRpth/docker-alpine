@@ -18,6 +18,13 @@ jobs:
     steps:
       - uses: rekgrpth/git-clone-shell-action@v1
       - uses: rekgrpth/git-fetch-upstream-merge-push-shell-action@v1
+  v3_20:
+    env:
+      INPUTS_BRANCH: v3.20
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rekgrpth/git-clone-shell-action@v1
+      - uses: rekgrpth/git-fetch-upstream-merge-push-shell-action@v1
   v3_19:
     env:
       INPUTS_BRANCH: v3.19
