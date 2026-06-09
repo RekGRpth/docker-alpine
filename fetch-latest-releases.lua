@@ -9,7 +9,7 @@ local yaml = require("lyaml")
 local lfs = require("lfs")
 
 local m = {}
-m.mirror = os.getenv("MIRROR") or "https://cz.alpinelinux.org/alpine"
+m.mirror = os.getenv("MIRROR") or "https://dl-master.alpinelinux.org/alpine"
 
 function m.fatal(...)
 	m.errormsg(...)
