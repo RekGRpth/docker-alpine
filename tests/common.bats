@@ -32,9 +32,11 @@ setup() {
   run docker run --rm alpine:$TAG cat /etc/apk/repositories
   [ $status -eq 0 ]
   [ "${lines[0]}" = "http://dl-cdn.alpinelinux.org/alpine/$BRANCH/main" ] \
-    || [ "${lines[0]}" = "https://dl-cdn.alpinelinux.org/alpine/$BRANCH/main" ]
+    || [ "${lines[0]}" = "https://dl-cdn.alpinelinux.org/alpine/$BRANCH/main" ] \
+    || [ "${lines[0]}" = "https://cdn.alpinelinux.org/$BRANCH/main" ]
   [ "${lines[1]}" = "http://dl-cdn.alpinelinux.org/alpine/$BRANCH/community" ] \
-    || [ "${lines[1]}" = "https://dl-cdn.alpinelinux.org/alpine/$BRANCH/community" ]
+    || [ "${lines[1]}" = "https://dl-cdn.alpinelinux.org/alpine/$BRANCH/community" ] \
+    || [ "${lines[1]}" = "https://cdn.alpinelinux.org/$BRANCH/community" ]
   [ "${lines[2]}" = "" ]
 }
 
